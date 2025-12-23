@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="te">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>శ్రీ వేంకటేశ్వర బ్రహ్మోత్సవం</title>
+<title>Tirupati Brahmotsavam</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Serif+Telugu&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -13,164 +12,187 @@ body{
   font-family:Poppins,sans-serif;
   background:#fff7ed;
   color:#3b2200;
+  scroll-behavior:smooth;
+  overflow-x:hidden;
 }
 header{
   height:100vh;
-  background:linear-gradient(rgba(70,30,0,.65),rgba(70,30,0,.65)),
-  url("https://i.imgur.com/3QZQZQy.jpg") center/cover no-repeat;
+  background:linear-gradient(rgba(80,30,0,.65),rgba(80,30,0,.65)),
+  url("https://images.unsplash.com/photo-1609943244484-b9e07d3d65b8") center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:gold;
+  position:relative;
+}
+header h1{font-family:'Noto Serif Telugu',serif;font-size:3rem;margin-bottom:10px;}
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(80,30,0,0.85);
+  padding:15px;
   display:flex;
   justify-content:center;
-  align-items:center;
-  text-align:center;
+  z-index:1000;
+}
+nav a{
   color:gold;
+  text-decoration:none;
+  margin:0 15px;
+  font-weight:600;
 }
-h1{font-family:'Noto Serif Telugu',serif;font-size:3rem;}
-section{padding:60px 20px;max-width:1100px;margin:auto;}
-.title{
-  text-align:center;
-  color:#a05a00;
-  font-size:2.3rem;
-  margin-bottom:30px;
-}
-.card{
-  background:#fff;
-  padding:25px;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-button{
-  background:#a05a00;
-  color:#fff;
-  border:none;
-  padding:10px 18px;
-  border-radius:25px;
-  cursor:pointer;
-}
-input,select{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-.notice{
-  background:#fff3cd;
-  padding:15px;
-  border-radius:10px;
-  font-size:0.9rem;
-  margin-bottom:15px;
-}
-footer{
-  background:#4a1f00;
-  color:gold;
-  text-align:center;
-  padding:25px;
+nav a:hover{color:#fff;}
+section{padding:60px 20px;max-width:1200px;margin:auto;}
+.title{text-align:center;font-size:2.4rem;color:#a05a00;margin-bottom:40px;}
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.15);}
+.card img{width:100%;height:180px;object-fit:cover;}
+.card-content{padding:20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+button{background:#a05a00;color:#fff;border:none;padding:10px 18px;border-radius:25px;cursor:pointer;margin-top:10px;}
+input,select,textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ccc;}
+.notice{background:#fff3cd;padding:10px;border-radius:8px;font-size:0.85rem;margin-bottom:10px;}
+footer{background:#4a1f00;color:gold;text-align:center;padding:25px;position:relative;}
+/* Flower animation */
+.flower{position:absolute;width:20px;height:20px;background:url('https://i.imgur.com/h5A12hQ.png') no-repeat center/contain;animation:fall linear infinite;}
+@keyframes fall{
+  0%{transform:translateY(-50px) rotate(0deg);}
+  100%{transform:translateY(110vh) rotate(360deg);}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <div>
-    <h1>శ్రీ వేంకటేశ్వర బ్రహ్మోత్సవం</h1>
-    <p>తిరుమల • Govinda Govinda</p>
-  </div>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Booking</a>
+</nav>
+
+<header id="home">
+<h1>శ్రీ వేంకటేశ్వర బ్రహ్మోత్సవం</h1>
+<p>Tirumala • Govinda Govinda</p>
 </header>
 
-<!-- EVENT INFO -->
-<section>
+<!-- FLOWERS -->
+<script>
+for(let i=0;i<30;i++){
+  let f=document.createElement('div');
+  f.className='flower';
+  f.style.left=Math.random()*100+'vw';
+  f.style.animationDuration=5+Math.random()*5+'s';
+  f.style.width=20+Math.random()*15+'px';
+  f.style.height=f.style.width;
+  document.body.appendChild(f);
+}
+</script>
+
+<section id="home">
 <h2 class="title">📍 Event Details</h2>
 <div class="card" style="text-align:center;font-size:1.1rem;line-height:1.8;">
-  <p><strong>📅 Date:</strong> 27 September – 5 October 2025</p>
-  <p><strong>📍 Location:</strong> Tirumala, Tirupati, Andhra Pradesh</p>
-  <p><strong>🛕 Temple:</strong> Sri Venkateswara Swamy Temple</p>
+<p><strong>📅 Date:</strong> 27 Sept – 5 Oct 2025</p>
+<p><strong>📍 Location:</strong> Tirumala, Tirupati</p>
+<p><strong>🛕 Temple:</strong> Sri Venkateswara Swamy Temple</p>
 </div>
 </section>
 
-<!-- ABOUT -->
-<section>
-<h2 class="title">బ్రహ్మోత్సవం గురించి</h2>
-<p style="text-align:center;font-size:1.1rem;line-height:1.9;">
-తిరుమలలో జరిగే అత్యంత పవిత్రమైన తొమ్మిది రోజుల వార్షిక మహోత్సవం.
-ఈ బ్రహ్మోత్సవాన్ని దర్శించడం భక్తులకు మహా భాగ్యంగా భావిస్తారు.
-</p>
-</section>
-
-<!-- SERVICES -->
-<section>
+<section id="services">
 <h2 class="title">🛎️ Services</h2>
 <div class="grid">
 
-<!-- BOOK POOJA -->
+<!-- Book Pooja -->
 <div class="card">
+<img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb">
+<div class="card-content">
 <h3>📿 Book Pooja</h3>
 <div class="notice">Request only • Not official booking</div>
-<form onsubmit="submitMsg(event,'Pooja booking request sent')">
+<form onsubmit="submitMsg(event,'Pooja booking request submitted')">
 <input type="text" placeholder="Name" required>
 <input type="date" required>
 <select required>
-  <option value="">Select Pooja</option>
-  <option>Archana</option>
-  <option>Abhishekam</option>
-  <option>Kalyanam</option>
+<option value="">Select Pooja</option>
+<option>Archana</option>
+<option>Abhishekam</option>
+<option>Kalyanam</option>
 </select>
 <button type="submit">Submit</button>
 </form>
 </div>
-
-<!-- PUJA KIT STORE -->
-<div class="card">
-<h3>🛒 Buy Pooja Kit</h3>
-<p>Available Items:</p>
-<ul>
-  <li>Kumkum & Vibhuti</li>
-  <li>Flowers & Garland</li>
-  <li>Camphor & Agarbatti</li>
-  <li>Coconut & Betel Leaves</li>
-</ul>
-<div class="notice">Display only • No online payment</div>
-<button onclick="alert('Store feature is informational only')">View Kits</button>
 </div>
 
-<!-- ASTROLOGY -->
+<!-- Pooja Kits -->
 <div class="card">
-<h3>🔮 Astrology Consultation</h3>
-<div class="notice">Request only • Personal use</div>
-<form onsubmit="submitMsg(event,'Astrology request submitted')">
+<img src="https://images.unsplash.com/photo-1590080877777-7f3f40b7b1cb">
+<div class="card-content">
+<h3>🛒 Buy Pooja Kit</h3>
+<ul>
+<li>Kumkum & Vibhuti</li>
+<li>Flowers & Garland</li>
+<li>Agarbatti & Camphor</li>
+<li>Coconut & Betel Leaves</li>
+</ul>
+<div class="notice">Display only • No payment</div>
+<button onclick="alert('Store is informational only')">View Kits</button>
+</div>
+</div>
+
+<!-- Astrology -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1532960401447-7dd05bef20b3">
+<div class="card-content">
+<h3>🔮 Astrology</h3>
+<div class="notice">Consultation request only</div>
+<form onsubmit="submitMsg(event,'Astrology consultation requested')">
 <input type="text" placeholder="Name" required>
 <input type="date" required>
 <select required>
-  <option value="">Consultation Type</option>
-  <option>Horoscope Reading</option>
-  <option>Muhurtham</option>
-  <option>Dosha Remedy</option>
+<option value="">Consultation Type</option>
+<option>Horoscope Reading</option>
+<option>Muhurtham</option>
+<option>Dosha Remedy</option>
 </select>
 <button type="submit">Request</button>
 </form>
 </div>
+</div>
 
 </div>
-<p id="serviceMsg" style="text-align:center;color:green;font-weight:600;"></p>
+<p id="msg" style="text-align:center;color:green;font-weight:600;"></p>
 </section>
 
-<!-- FOOTER -->
+<section id="contact">
+<h2 class="title">📧 Booking & Contact</h2>
+<div class="card">
+<div class="card-content">
+<p>All service requests can be submitted here. For personal-use demo, connect to Google Form for actual email collection.</p>
+<form onsubmit="submitMsg(event,'Request submitted!')">
+<input type="text" placeholder="Name" required>
+<input type="tel" placeholder="Mobile Number" required>
+<select required>
+<option value="">Select Service</option>
+<option>Book Pooja</option>
+<option>Astrology</option>
+</select>
+<input type="date" required>
+<textarea placeholder="Message / Notes" rows="3"></textarea>
+<button type="submit">Submit Request</button>
+</form>
+</div>
+</div>
+</section>
+
 <footer>
-<p>🙏 గోవింద గోవింద 🙏</p>
+<p>🙏 Govinda Govinda 🙏</p>
 <p>Personal Tirupati Brahmotsavam Website</p>
 </footer>
 
 <script>
-function submitMsg(e,msg){
+function submitMsg(e,text){
   e.preventDefault();
-  document.getElementById("serviceMsg").innerText =
-  "🙏 " + msg + ". Govinda Govinda!";
+  document.getElementById("msg").innerText = "🙏 " + text + ". Govinda Govinda!";
 }
 </script>
 
