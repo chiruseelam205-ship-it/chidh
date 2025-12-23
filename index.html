@@ -1,153 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
-  <meta charset="UTF-8">
-  <title>Tirupati Brahmotsavam</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fff8f0;
-      color: #333;
-    }
+<meta charset="UTF-8">
+<title>శ్రీ వేంకటేశ్వర బ్రహ్మోత్సవం</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('https://i.imgur.com/3QZQZQy.jpg') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      color: #b36b00;
-      margin-bottom: 40px;
-    }
-
-    .about {
-      text-align: center;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    .schedule {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    .card h3 {
-      color: #d17a00;
-      margin-bottom: 10px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-
-    footer {
-      background: #4a2c00;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer p {
-      margin: 5px 0;
-      font-size: 0.9rem;
-    }
-  </style>
+<style>
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  background:#fff7ed;
+  color:#3b2200;
+}
+header{
+  height:100vh;
+  background:linear-gradient(rgba(70,30,0,.65),rgba(70,30,0,.65)),
+  url("https://i.imgur.com/3QZQZQy.jpg") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:gold;
+}
+h1{font-family:'Noto Serif Telugu',serif;font-size:3rem;}
+section{padding:60px 20px;max-width:1100px;margin:auto;}
+.title{text-align:center;color:#a05a00;font-size:2.3rem;margin-bottom:30px;}
+button{
+  background:#a05a00;color:#fff;border:none;
+  padding:10px 18px;border-radius:25px;
+  cursor:pointer;
+}
+.card{
+  background:#fff;padding:25px;border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+.schedule{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+input, select{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+.notice{
+  background:#fff3cd;
+  padding:15px;
+  border-radius:10px;
+  font-size:0.9rem;
+  margin-bottom:15px;
+}
+footer{
+  background:#4a1f00;color:gold;
+  text-align:center;padding:25px;
+}
+.whatsapp{
+  position:fixed;bottom:20px;right:20px;
+  background:#25D366;color:#fff;
+  padding:14px 18px;border-radius:50%;
+  font-size:22px;text-decoration:none;
+}
+</style>
 </head>
+
 <body>
 
 <header>
   <div>
-    <h1>Śrī Venkateśwara Brahmotsavam</h1>
-    <p>Tirumala • Divine Festival of Lord Balaji</p>
+    <h1>శ్రీ వేంకటేశ్వర బ్రహ్మోత్సవం</h1>
+    <p>తిరుమల • Govinda Govinda</p>
+    <button onclick="playBell()">🔔 Bell</button>
   </div>
 </header>
 
 <section>
-  <h2 class="section-title">About Brahmotsavam</h2>
-  <p class="about">
-    Tirupati Brahmotsavam is the most sacred and grand annual festival celebrated at
-    the Tirumala Venkateswara Temple. Devotees from all over the world gather to witness
-    the divine processions of Lord Venkateswara during this nine-day festival.
-  </p>
+<h2 class="title">బ్రహ్మోత్సవం గురించి</h2>
+<p style="text-align:center;font-size:1.1rem;line-height:1.9;">
+తిరుమలలో జరిగే అత్యంత పవిత్రమైన తొమ్మిది రోజుల మహోత్సవం.
+</p>
 </section>
 
 <section>
-  <h2 class="section-title">Event Schedule</h2>
-  <div class="schedule">
-    <div class="card">
-      <h3>Day 1</h3>
-      <p>Dwajarohanam</p>
-    </div>
-    <div class="card">
-      <h3>Day 2</h3>
-      <p>Pedda Sesha Vahanam</p>
-    </div>
-    <div class="card">
-      <h3>Day 5</h3>
-      <p>Garuda Vahanam</p>
-    </div>
-    <div class="card">
-      <h3>Day 9</h3>
-      <p>Chakra Snanam</p>
-    </div>
+<h2 class="title">9 రోజుల వాహన సేవలు</h2>
+<div class="schedule">
+  <div class="card">ధ్వజారోహణం</div>
+  <div class="card">పెద్ద శేష వాహనం</div>
+  <div class="card">గరుడ వాహనం</div>
+  <div class="card">రథోత్సవం</div>
+  <div class="card">చక్రస్నానం</div>
+</div>
+</section>
+
+<!-- ONLINE BOOKING SECTION -->
+<section>
+<h2 class="title">Online Booking (Request)</h2>
+
+<div class="card">
+  <div class="notice">
+    ⚠️ ఇది అధికారిక TTD బుకింగ్ కాదు.<br>
+    ఇది కేవలం Darshan / Seva **Request Form** మాత్రమే.
   </div>
+
+  <form onsubmit="submitBooking(event)">
+    <input type="text" placeholder="Devotee Name" required>
+    <input type="tel" placeholder="Mobile Number" required>
+    
+    <select required>
+      <option value="">Select Type</option>
+      <option>Darshan</option>
+      <option>Seva</option>
+    </select>
+
+    <input type="date" required>
+
+    <button type="submit">Submit Request</button>
+  </form>
+
+  <p id="msg" style="color:green;font-weight:600;"></p>
+</div>
 </section>
 
 <section>
-  <h2 class="section-title">Gallery</h2>
-  <div class="gallery">
-    <img src="https://i.imgur.com/5JbYQZk.jpg" alt="Tirupati Temple">
-    <img src="https://i.imgur.com/1mGZQpD.jpg" alt="Garuda Vahanam">
-    <img src="https://i.imgur.com/4qFQpTQ.jpg" alt="Brahmotsavam">
-  </div>
+<h2 class="title">Live Darshan</h2>
+<iframe width="100%" height="350"
+src="https://www.youtube.com/embed/live_stream?channel=UC2V7vC4zY9Jx8QeP7b5k2Fw"
+allowfullscreen style="border-radius:15px;"></iframe>
 </section>
 
 <footer>
-  <p>🙏 Govinda Govinda 🙏</p>
-  <p>Personal Website – Tirupati Brahmotsavam</p>
+<p>🙏 గోవింద గోవింద 🙏</p>
+<p>Personal Tirupati Brahmotsavam Website</p>
 </footer>
+
+<a class="whatsapp"
+href="https://wa.me/?text=Govinda%20Govinda%20Tirupati%20Brahmotsavam"
+target="_blank">🟢</a>
+
+<audio id="bell">
+<source src="https://www.soundjay.com/misc/sounds/temple-bell-01.mp3">
+</audio>
+
+<script>
+function playBell(){
+  document.getElementById("bell").play();
+}
+
+function submitBooking(e){
+  e.preventDefault();
+  document.getElementById("msg").innerText =
+  "🙏 Your request has been submitted. Govinda Govinda!";
+}
+</script>
 
 </body>
 </html>
